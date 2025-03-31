@@ -1,0 +1,1 @@
+Esta es la cadena que desea escribir y que posterior mente se va a leer
