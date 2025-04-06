@@ -22,7 +22,7 @@ public class Main {
         ArrayList<Empleado> empleados = new ArrayList<>();
         // Aseguramos que el ArrayList tenga suficiente capacidad para al menos 11 elementos,
         // evitando redimensionamientos automáticos al agregar estos elementos posteriormente.
-        empleados.ensureCapacity(11);
+        //empleados.ensureCapacity(11);
 
         empleados.add(new Empleado("inaki", 22,2000));//1
         empleados.add(new Empleado("yaqui", 20,1000));//2
@@ -39,12 +39,18 @@ public class Main {
         // su tamaño para adaptarse a más elementos.
         empleados.add(new Empleado("inaki", 22,2000));//11
 
+        empleados.set(0, new Empleado("Alfonso",22,2000));//lo ponemos al principio
+
+
         empleados.trimToSize();//cortar el exeso de basura
 
         for (Empleado empleado : empleados) {
             System.out.println(empleado.get_datos());
         }
         System.out.println("La lista tiene: " + empleados.size() + " elementos");
+
+        System.out.println("El primero en la lista es " + empleados.get(0).get_datos());//obtenemos el que este en ultimo luguar);
+
     }
 }
 class Empleado{
