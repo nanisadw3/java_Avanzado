@@ -2,6 +2,7 @@ package org.example;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -44,13 +45,16 @@ public class Main {
 
         empleados.trimToSize();//cortar el exeso de basura
 
-        for (Empleado empleado : empleados) {
-            System.out.println(empleado.get_datos());
-        }
         System.out.println("La lista tiene: " + empleados.size() + " elementos");
 
         System.out.println("El primero en la lista es " + empleados.get(0).get_datos());//obtenemos el que este en ultimo luguar);
 
+        //iteradores para array list
+
+        Iterator <Empleado> iterador  = empleados.iterator();//creamos un interador de nuestro array
+        while (iterador.hasNext()){//has nex nos dice true si es que hay mas elementos
+            System.out.println(iterador.next().get_datos());
+        }//esto es como un for each
     }
 }
 class Empleado{
