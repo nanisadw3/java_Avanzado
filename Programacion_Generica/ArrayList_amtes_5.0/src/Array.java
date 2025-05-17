@@ -1,5 +1,5 @@
-public class ArrayList {
-    public ArrayList(int z){
+public class Array {
+    public Array(int z){
     lista = new Object[z];//lista generica
 
     }
@@ -7,9 +7,10 @@ public class ArrayList {
         return lista[i];
     }
     public void add(Object o){
-        lista[i] = 0;
+        lista[i] = o;
         i++;
     }
     public Object[] lista;
     private int i = 0;
 }
+
